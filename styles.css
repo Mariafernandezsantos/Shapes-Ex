@@ -1,54 +1,63 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f1f1f1;
+body{
+  align-items: center;
+  position: relative;
+}
+
+h1{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+#triangle{
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #b6f614;
+  border-left: 50px solid transparent;
+  margin-left: 30%;
+  margin-top: 5%;
+  position: absolute;
+  transition: top 0.5s ease;
+}
+
+#square{
+  width: 90px;
+  height: 90px;   
+  margin-left: 50%;
+  margin-top: 5%;
+  background: #ff00d4;
+  position: absolute;
+  transition: top 0.5s ease;
+}
+
+#round{
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  margin-left: 70%;
+  margin-top: 5%;
+  background: #9900ff;
+  position: absolute;
+  transition: top 0.5s ease;
+}
+
+#triangle:hover{
+  border-bottom: 100px solid #f91dee;
   }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .shape {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-  }
-  
-  #triangle {
-    background-color: #CCFF00;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-  
-  #square {
-    background-color: #FF0000;
-  }
-  
-  #circle {
-    background-color: #5200FF;
-    border-radius: 50%;
-  }
-  
-  .shape:hover {
-    background-color: #c0392b;
-    transform: translateY(-10px);
-  }
-  
-  #reset-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  #square:hover{
+    background: #00eeff;
+   }
+   
+#round:hover{
+  background: #ff8000;
+}
+
+
+button{
+  margin-top: 15%;
+  margin-left: 50%;
+}
+
+

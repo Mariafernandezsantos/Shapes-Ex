@@ -1,66 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const triangle = document.getElementById('triangle');
-    const square = document.getElementById('square');
-    const circle = document.getElementById('circle');
-    const resetButton = document.getElementById('reset-button');
-  
-    function changeColorAndMoveUp(element) {
-      element.style.backgroundColor = '#c0392b';
-      element.style.transform = 'translateY(-10px)';
-    }
-  
-    function resetColorAndMoveDown(element) {
-      element.style.backgroundColor = '';
-      element.style.transform = '';
-    }
-  
-    function hideElement(element) {
-      element.style.display = 'none';
-    }
-  
-    function showElement(element) {
-      element.style.display = 'inline-block';
-    }
-  
-    triangle.addEventListener('mouseover', () => {
-      changeColorAndMoveUp(triangle);
-    });
-  
-    triangle.addEventListener('mouseout', () => {
-      resetColorAndMoveDown(triangle);
-    });
-  
-    triangle.addEventListener('click', () => {
-      hideElement(triangle);
-    });
-  
-    square.addEventListener('mouseover', () => {
-      changeColorAndMoveUp(square);
-    });
-  
-    square.addEventListener('mouseout', () => {
-      resetColorAndMoveDown(square);
-    });
-  
-    square.addEventListener('click', () => {
-      hideElement(square);
-    });
-  
-    circle.addEventListener('mouseover', () => {
-      changeColorAndMoveUp(circle);
-    });
-  
-    circle.addEventListener('mouseout', () => {
-      resetColorAndMoveDown(circle);
-    });
-  
-    circle.addEventListener('click', () => {
-      hideElement(circle);
-    });
-  
-    resetButton.addEventListener('click', () => {
-      showElement(triangle);
-      showElement(square);
-      showElement(circle);
-    });
-  });
+const triangle = disguiseTriangle;
+const square = disguiseSquare;
+const round = disguiseRound;
+const reset = buttonReset;
+
+
+function disguiseTriangle() {
+  let triangle = document.getElementById('triangle');
+  triangle.style.top = '-20px'
+  triangle.style.display = 'none';
+}
+
+
+function disguiseSquare() {
+  let square = document.getElementById('square');
+  square.style.top = '-20px'
+  square.style.display = 'none';
+}
+
+function disguiseRound() {
+    let round = document.getElementById('round');
+    round.style.top = '-20px'
+    round.style.display = 'none';
+}
+
+buttonReset.addEventListener('click',resetAnimation);
+
+function buttonReset(){
+    round.style.top = roundInitialtop;
+    round.style.display = 'block';
+}
+
+let buttonReset = document.getElementById('buttonReset');
+buttonReset.addEventListener('click', function(){
+    console.log('se ha reseteado la animacion');
+})
